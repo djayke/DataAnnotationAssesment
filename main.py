@@ -1,6 +1,8 @@
 # Here is a python function which will scan input file and extract words that correspond
 # to the last value of each row in a staircase. The value are ordered.
 #
+import sys
+
 
 # Function that initialize dictionary with data read from file
 def initDictionary(data):
@@ -67,4 +69,5 @@ def decode(filename):
     print(ToString(arrResult))
 
 if __name__ == '__main__':
-    decode("coding_qual.txt")
+    args = sys.argv[1:]
+    decode(args[0])
